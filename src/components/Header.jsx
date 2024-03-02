@@ -13,24 +13,32 @@ const navItemsInfo = [
 ];
 
 const NavItem = ({ item }) => {
+  const [dropdown, setDropdown] = useState(false);
+
+  const toggleDropdownHandler = () => {
+    setDropdown((curState) => {
+      return !curState;
+    });
+  };
+
   return (
     <li className="relative group">
       {item.type === "link" ? (
         <>
           <a href="/" className="px-4 py-2">
-            {item.name} 
+            {item.name}
           </a>
-          <span className="text-blue-500 absolute transition-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
+          <span className="cursor-pointer text-blue-500 absolute transition-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
             /
           </span>
         </>
       ) : (
-        <>
-          <a href="/" className="px-4 py-2 flex gap-x-1 items-center">
+        <div className="flex flex-col items-center">
+          <button className="px-4 py-2 flex gap-x-1 items-center" onClick={toggleDropdownHandler}>
             <span>{item.name}</span>
             <IoIosArrowDown />
-          </a>
-          <div className="hidden transition-all duration-500 pt-4 absolute bottom-0 right-0 transform translate-y-full group-hover:block w-max">
+          </button>
+          <div className={`${dropdown ? 'block' : 'hidden'} lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}>
             <ul className="flex flex-col shadow-lg rounded-lg overflow-hidden">
               {item.items.map((page) => (
                 <a
@@ -42,7 +50,7 @@ const NavItem = ({ item }) => {
               ))}
             </ul>
           </div>
-        </>
+        </div> /* Closing div tag added */
       )}
     </li>
   );
@@ -71,9 +79,9 @@ const Header = () => {
           )}
         </div>
         <div
-         className={`${
-          navIsVisible ? "right-0" : "-right-full"
-        } transition-all duration-300 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}
+          className={`${
+            navIsVisible ? "right-0" : "-right-full"
+          } transition-all duration-300 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}
         >
           <ul className="text-white items-center gap-y-5 lg:text-dark-soft flex flex-col lg:flex-row gap-x-2 font-semibold">
             {navItemsInfo.map((item) => (
