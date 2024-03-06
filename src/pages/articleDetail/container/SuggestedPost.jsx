@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { images, stables } from "../../../constants";
+import { IoImageSharp } from "react-icons/io5";
 
 const SuggestedPosts = ({ className, header, posts = [], tags }) => {
   return (
@@ -18,11 +19,7 @@ const SuggestedPosts = ({ className, header, posts = [], tags }) => {
           >
             <img
               className="aspect-square object-cover rounded-lg w-1/5"
-              src={
-                item?.photo
-                  ? stables.UPLOAD_FOLDER_BASE_URL + item?.photo
-                  : images.samplePostImage
-              }
+              src={images.post1Image}
               alt={item.title}
             />
             <div className="text-sm font-roboto text-dark-hard font-medium">

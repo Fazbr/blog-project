@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import MainLayout from "../../components/MainLayout";
 import { images } from "../../constants";
@@ -13,12 +13,33 @@ const breadCrumbsData = [
 
 const postsData = [
   {
-    _id:"1",
-    image:images.post1Image,
-    title:"Help children get better education"
+    _id: "1",
+    image: images.post1Image,
+    title: "Help children get better education",
     createdAt: "2024-01-01T15:35:53.607+0000",
-  }
-]
+  },
+  {
+    _id: "2",
+    image: images.post1Image,
+    title: "Help children get better education",
+    createdAt: "2024-01-01T15:35:53.607+0000",
+  },
+  {
+    _id: "3",
+    image: images.post1Image,
+    title: "Help children get better education",
+    createdAt: "2024-01-01T15:35:53.607+0000",
+  },
+  {
+    _id: "4",
+    image: images.post1Image,
+    title: "Help children get better education",
+    createdAt: "2024-01-01T15:35:53.607+0000",
+  },
+];
+
+const tagsData = ["Education", "Children", "School"];
+
 const ArticleDetailPage = () => {
   return (
     <MainLayout>
@@ -51,7 +72,11 @@ const ArticleDetailPage = () => {
             </p>
           </div>
         </article>
-        <SuggestedPosts header="Latest Article" />
+        <SuggestedPosts
+          header="Latest Article"
+          posts={postoData}
+          tages={tagesData}
+        />
       </section>
     </MainLayout>
   );
