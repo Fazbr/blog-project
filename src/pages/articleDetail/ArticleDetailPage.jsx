@@ -76,6 +76,7 @@ const ArticleDetailPage = () => {
           header="Latest Article"
           posts={postoData}
           tages={tagesData}
+          className="mt-8"
         />
       </section>
     </MainLayout>
