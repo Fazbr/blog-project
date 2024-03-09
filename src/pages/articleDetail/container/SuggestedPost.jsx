@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { images, stables } from "../../../constants";
-import { IoImageSharp } from "react-icons/io5";
+import { images,} from "../../../constants";
+
 
 const SuggestedPosts = ({ className, header, posts = [], tags }) => {
   return (
