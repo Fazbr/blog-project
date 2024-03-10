@@ -35,8 +35,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="col-span-5 md:col-span-4 lg:col-span-2">
-          <h3 className="text-dark-light font-bold md:text-lg">Services</h3>
-          <ul className="text-[#959EAD] text-sm mt-5 space-y-4 md:text-base">
+          <h3 className="text-dark-light font-bold md:text-l Zg">Services</h3>
+          <ul className="text-[#959EAD] text-sm mt-5 space-y nb-4 md:text-base">
             <li>
               <a href="/">Documentation</a>
             </li>

@@ -77,7 +77,7 @@ const ArticleDetailPage = () => {
         <SuggestedPosts
           header="Latest Article"
           posts={postsData}
-          tages={tagsData}
+          tags={tagsData}
           className="mt-8"
         />
       </section>
