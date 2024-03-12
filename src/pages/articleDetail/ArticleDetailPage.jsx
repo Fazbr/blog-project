@@ -15,25 +15,25 @@ const breadCrumbsData = [
 const postsData = [
   {
     _id: "1",
-    image: images.Post1Image,
+    image: images.post1Image,
     title: "Help children get better education",
     createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "2",
-    image: images.Post1Image,
+    image: images.post1Image,
     title: "Help children get better education",
     createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "3",
-    image: images.Post1Image,
+    image: images.post1Image,
     title: "Help children get better education",
     createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "4",
-    image: images.Post1Image,
+    image: images.post1Image,
     title: "Help children get better education",
     createdAt: "2023-01-28T15:35:53.607+0000",
   },
@@ -57,7 +57,7 @@ const ArticleDetailPage = () => {
           <BreadCrumbs data={breadCrumbsData} />
           <img
             className="rounded-xl w-full"
-            src={images.Post1Image}
+            src={images.post1Image}
             alt="laptop"
           />
           <Link
