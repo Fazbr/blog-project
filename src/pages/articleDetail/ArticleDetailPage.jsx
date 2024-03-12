@@ -5,6 +5,7 @@ import CommentsContainer from "../../components/comments/CommentsContainer";
 import MainLayout from "../../components/MainLayout";
 import { images } from "../../constants";
 import SuggestedPosts from "./container/SuggestedPost";
+import SocialShareButtons from "../../components/SocialShareButtons";
 
 const breadCrumbsData = [
   { name: "Home", link: "/" },
@@ -82,12 +83,23 @@ const ArticleDetailPage = () => {
           </div>
           <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
-        <SuggestedPosts
-          header="Latest Article"
-          posts={postsData}
-          tags={tagsData}
-          className="mt-8 lg:mt-0 lg:max-w-xs"
-        />
+        <div>
+          <SuggestedPosts
+            header="Latest Article"
+            posts={postsData}
+            tags={tagsData}
+            className="mt-8 lg:mt-0 lg:max-w-xs"
+          />
+          <div className="mt-7">
+            <h2 className="font-roboto font-medium text-dark-hard mb-4 md:text-xl">
+              Share on:
+            </h2>
+            <SocialShareButtons
+              url={encodeURI("https://www.nvtc.edu.bh/")}
+              title={encodeURIComponent("We Build The Future Today")}
+            />
+          </div>
+        </div>
       </section>
     </MainLayout>
   );
