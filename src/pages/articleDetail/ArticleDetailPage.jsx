@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BreadCrumbs from "../../components/BreadCrumbs";
+import CommentsContainer from "../../components/comments/CommentsContainer";
 import MainLayout from "../../components/MainLayout";
 import { images } from "../../constants";
 import SuggestedPosts from "./container/SuggestedPost";
-import CommentsContainer from "../../components/comments/CommentsContainer";
 
 const breadCrumbsData = [
   { name: "Home", link: "/" },
@@ -15,31 +15,39 @@ const breadCrumbsData = [
 const postsData = [
   {
     _id: "1",
-    image: images.post1Image,
+    image: images.Post1Image,
     title: "Help children get better education",
-    createdAt: "2024-01-01T15:35:53.607+0000",
+    createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "2",
-    image: images.post1Image,
+    image: images.Post1Image,
     title: "Help children get better education",
-    createdAt: "2024-01-01T15:35:53.607+0000",
+    createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "3",
-    image: images.post1Image,
+    image: images.Post1Image,
     title: "Help children get better education",
-    createdAt: "2024-01-01T15:35:53.607+0000",
+    createdAt: "2023-01-28T15:35:53.607+0000",
   },
   {
     _id: "4",
-    image: images.post1Image,
+    image: images.Post1Image,
     title: "Help children get better education",
-    createdAt: "2024-01-01T15:35:53.607+0000",
+    createdAt: "2023-01-28T15:35:53.607+0000",
   },
 ];
 
-const tagsData = ["Education", "Children", "School"];
+const tagsData = [
+  "Medical",
+  "Lifestyle",
+  "Learn",
+  "Healthy",
+  "Food",
+  "Diet",
+  "Education",
+];
 
 const ArticleDetailPage = () => {
   return (
@@ -49,12 +57,12 @@ const ArticleDetailPage = () => {
           <BreadCrumbs data={breadCrumbsData} />
           <img
             className="rounded-xl w-full"
-            src={images.post1Image}
+            src={images.Post1Image}
             alt="laptop"
           />
           <Link
             to="/blog?category=selectedCategory"
-            className="text-primary text-sm font-roboto inline-block md:text-base"
+            className="text-primary text-sm font-roboto inline-block mt-4 md:text-base"
           >
             EDUCATION
           </Link>
@@ -72,13 +80,13 @@ const ArticleDetailPage = () => {
               lectus proin.
             </p>
           </div>
-          <CommentsContainer className="mt-10" />
+          <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
         <SuggestedPosts
           header="Latest Article"
           posts={postsData}
           tags={tagsData}
-          className="mt-8"
+          className="mt-8 lg:mt-0 lg:max-w-xs"
         />
       </section>
     </MainLayout>

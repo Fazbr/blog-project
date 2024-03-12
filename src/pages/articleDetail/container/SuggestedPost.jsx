@@ -52,4 +52,5 @@ const SuggestedPosts = ({ className, header, posts = [], tags }) => {
     </div>
   );
 };
+
 export default SuggestedPosts;
