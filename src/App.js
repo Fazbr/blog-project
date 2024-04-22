@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import ArticleDetailPage from "./pages/articleDetail/ArticleDetailPage";
 import HomePage from "./pages/home/HomePage";
@@ -13,3 +15,4 @@ function App() {
       </Routes>
     </div>
   );
+}
