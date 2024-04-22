@@ -1,9 +1,7 @@
-import { Routes, Route } from "react-router-dom";
-
 import "./App.css";
 import ArticleDetailPage from "./pages/articleDetail/ArticleDetailPage";
 import HomePage from "./pages/home/HomePage";
-import RegisterPage from "./pages/register/RegusterPage";
+import RegisterPage from "./pages/register/RegisterPage";
 
 function App() {
   return (
@@ -15,6 +13,3 @@ function App() {
       </Routes>
     </div>
   );
-}
-
-export default App;
