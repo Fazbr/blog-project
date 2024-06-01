@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 
 import MainLayout from "../../components/MainLayout";
-import { signup } from "../../services/users";
+import { signup } from "../../services/index/users";
 import { userActions } from "../../store/reducers/userReducers";
 
 const RegisterPage = () => {
